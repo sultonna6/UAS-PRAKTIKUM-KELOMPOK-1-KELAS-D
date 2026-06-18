@@ -122,11 +122,11 @@ UAS-PRAKTIKUM-KELOMPOK-1-KELAS-D
 * Integrasi seluruh modul
 * Review dan merge Pull Request
 
-### Rangga
+### Rangga Saputra
 
 * Modul Data Siswa
 
-### Khusaeri Muhamad
+### Muhamad Khusaeri
 
 * Modul Mata Pelajaran
 
@@ -145,8 +145,8 @@ UAS-PRAKTIKUM-KELOMPOK-1-KELAS-D
 | No | Nama             |
 | -- | ---------------- |
 | 1  | Sulton Nur Arif  |
-| 2  | Rangga           |
-| 3  | Khusaeri Muhamad |
+| 2  | Rangga Saputra   |
+| 3  | Muhamad Khusaeri |
 | 4  | Nurjaqia         |
 | 5  | Rega Faturrahman |
 
