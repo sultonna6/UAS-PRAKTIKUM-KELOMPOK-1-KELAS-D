@@ -1,24 +1,22 @@
 # 📚 Sistem Akademik Sederhana
 
-## Praktikum Algoritma dan Struktur Data
+## Ujian Akhir Semester (UAS)
 
-### Ujian Akhir Semester (UAS)
+### Praktikum Algoritma dan Struktur Data
 
 ---
 
 ## Deskripsi Proyek
 
-Sistem Akademik Sederhana merupakan aplikasi berbasis C++ yang dirancang untuk membantu pengelolaan data akademik di lingkungan sekolah. Aplikasi ini memungkinkan pengguna untuk mengelola data siswa, mata pelajaran, jadwal pelajaran, serta nilai siswa secara terstruktur.
+Sistem Akademik Sederhana adalah aplikasi berbasis C++ yang digunakan untuk mengelola data akademik sekolah. Sistem ini membantu pengguna dalam mengelola data siswa, mata pelajaran, jadwal pelajaran, dan nilai siswa secara terstruktur.
 
-Selain itu, sistem menyediakan fitur pencarian dan pengurutan data akademik sehingga informasi dapat ditemukan dengan lebih cepat dan efisien.
-
-Proyek ini dibuat sebagai tugas Ujian Akhir Semester (UAS) mata kuliah Praktikum Algoritma dan Struktur Data dengan menerapkan konsep struktur data, algoritma pencarian (searching), algoritma pengurutan (sorting), serta kolaborasi menggunakan Git dan GitHub.
+Proyek ini dibuat untuk memenuhi tugas Ujian Akhir Semester (UAS) mata kuliah Praktikum Algoritma dan Struktur Data dengan menerapkan konsep struktur data yang telah dipelajari selama perkuliahan.
 
 ---
 
 ## Studi Kasus
 
-**Studi Kasus No. 12 – Sistem Akademik Sederhana**
+**Sistem Akademik Sederhana**
 
 Sekolah ingin membangun sistem yang dapat mengelola data siswa, mata pelajaran, jadwal, nilai, serta pencarian dan pengurutan data akademik.
 
@@ -26,143 +24,161 @@ Sekolah ingin membangun sistem yang dapat mengelola data siswa, mata pelajaran, 
 
 ## Tujuan Proyek
 
-* Mengelola data siswa secara terstruktur.
+* Mengelola data siswa.
 * Mengelola data mata pelajaran.
-* Mengelola data nilai siswa.
-* Menerapkan algoritma pencarian data.
-* Menerapkan algoritma pengurutan data.
-* Menerapkan kolaborasi tim menggunakan GitHub.
-* Mengimplementasikan konsep struktur data dalam bahasa C++.
+* Mengelola jadwal pelajaran.
+* Mengelola nilai siswa.
+* Menampilkan informasi akademik secara terstruktur.
+* Menerapkan konsep struktur data dalam bahasa C++.
+* Melatih kerja sama tim menggunakan GitHub.
 
 ---
 
-## Fitur Aplikasi
+## Fitur Sistem
 
-### 1. Manajemen Data Siswa
+### Data Siswa
 
 * Tambah data siswa
 * Tampilkan data siswa
 * Edit data siswa
 * Hapus data siswa
 
-### 2. Manajemen Mata Pelajaran
+### Mata Pelajaran
 
 * Tambah mata pelajaran
 * Tampilkan mata pelajaran
 
-### 3. Manajemen Nilai
+### Jadwal Pelajaran
+
+* Tambah jadwal pelajaran
+* Tampilkan jadwal pelajaran
+
+### Nilai Siswa
 
 * Input nilai siswa
 * Tampilkan nilai siswa
 
-### 4. Pencarian Data
+### Pencarian Data
 
 * Cari siswa berdasarkan NIS
 * Cari siswa berdasarkan nama
 
-### 5. Pengurutan Data
+### Pengurutan Data
 
-* Urutkan nama siswa (A-Z)
-* Urutkan nilai tertinggi ke terendah
+* Urutkan data siswa berdasarkan nama
+* Urutkan data nilai siswa
 
 ---
 
 ## Struktur Data yang Digunakan
 
-### Struct
+### Array
 
 Digunakan untuk menyimpan data siswa, mata pelajaran, dan nilai.
 
-### Vector
+### Linked List
 
-Digunakan sebagai media penyimpanan data secara dinamis.
-
-### Searching
-
-Menggunakan algoritma Sequential Search untuk pencarian data.
-
-### Sorting
-
-Menggunakan algoritma Bubble Sort atau Selection Sort untuk pengurutan data.
+Digunakan untuk mengelola data jadwal pelajaran yang dapat bertambah secara dinamis.
 
 ---
 
-## Teknologi yang Digunakan
+## Tipe Data yang Digunakan
 
-* Bahasa Pemrograman C++
-* Git
-* GitHub
-* Visual Studio Code / Dev-C++ / CodeBlocks
+### Struct Siswa
+
+Digunakan untuk menyimpan data siswa.
+
+### Struct Mata Pelajaran
+
+Digunakan untuk menyimpan data mata pelajaran.
+
+### Struct Jadwal
+
+Digunakan untuk menyimpan data jadwal pelajaran.
+
+### Struct Nilai
+
+Digunakan untuk menyimpan data nilai siswa.
 
 ---
 
-## Struktur Project
+## Struktur Menu
 
 ```text
-UAS-PRAKTIKUM-KELOMPOK-1-KELAS-D
+=================================
+     SISTEM AKADEMIK
+=================================
 
-├── main.cpp
-├── siswa.h
-├── siswa.cpp
-├── mapel.h
-├── mapel.cpp
-├── nilai.h
-├── nilai.cpp
-├── searchsort.h
-├── searchsort.cpp
-└── README.md
+1. Data Siswa
+2. Mata Pelajaran
+3. Jadwal Pelajaran
+4. Nilai Siswa
+5. Cari Siswa
+6. Urutkan Data
+7. Tampilkan Semua Data
+8. Keluar
 ```
+
+---
+
+## Flowchart Sistem
+
+Flowchart sistem terlampir pada folder dokumentasi proyek.
+
+---
 
 ## Pembagian Tugas Kelompok
 
 ### Sulton Nur Arif (Lead Developer)
 
 * Membuat repository GitHub
-* Membuat menu utama aplikasi
-* Integrasi seluruh modul
+* Membuat flowchart sistem
+* Membuat menu utama
+* Mengintegrasikan seluruh modul
 * Review dan merge Pull Request
 
 ### Rangga Saputra
 
 * Modul Data Siswa
+* Implementasi Struct dan Array Data Siswa
 
 ### Muhamad Khusaeri
 
 * Modul Mata Pelajaran
+* Implementasi Struct dan Array Mata Pelajaran
 
 ### Nurjaqia
 
-* Modul Input dan Pengelolaan Nilai
+* Modul Jadwal Pelajaran
+* Implementasi Linked List Jadwal
 
 ### Rega Faturrahman
 
-* Modul Searching dan Sorting
+* Modul Nilai Siswa
+* Pencarian dan Pengurutan Data
 
 ---
 
-## Anggota Kelompok 1
+## Anggota Kelompok
 
-| No | Nama             |
-| -- | ---------------- |
-| 1  | Sulton Nur Arif  |
-| 2  | Rangga Saputra   |
-| 3  | Muhamad Khusaeri |
-| 4  | Nurjaqia         |
-| 5  | Rega Faturrahman |
+1. Sulton Nur Arif
+2. Rangga Saputra
+3. Muhamad Khusaeri
+4. Nurjaqia
+5. Rega Faturrahman
 
 ---
 
-## Cara Menjalankan Program
+## Teknologi yang Digunakan
 
-1. Clone repository.
-2. Buka project menggunakan compiler C++.
-3. Compile file `main.cpp`.
-4. Jalankan program.
-5. Pilih menu yang tersedia.
+* C++
+* Git
+* GitHub
+* Dev-C++
 
 ---
 
-## Repository GitHub
+## Repository
 
 UAS Praktikum Algoritma dan Struktur Data
 Kelompok 1 – Kelas D
