@@ -123,7 +123,7 @@ Digunakan untuk menyimpan data nilai siswa.
 
 ## Flowchart Sistem
 
-Flowchart sistem terlampir pada folder dokumentasi proyek.
+![Flowchart](Flowchart%20UAS.drawio.png)
 
 ---
 
@@ -161,11 +161,11 @@ Flowchart sistem terlampir pada folder dokumentasi proyek.
 
 ## Anggota Kelompok
 
-1. Sulton Nur Arif
-2. Rangga Saputra
-3. Muhamad Khusaeri
-4. Nurjaqia
-5. Rega Faturrahman
+1. Sulton Nur Arif - 2503010083
+2. Rangga Saputra - 2503010076
+3. Muhamad Khusaeri - 2503010090
+4. Nurjaqia - 2503010095
+5. Rega Faturrahman - 2503010088
 
 ---
 
