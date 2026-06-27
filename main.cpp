@@ -128,10 +128,12 @@ void menuNilai();
 // 8. MAIN PROGRAM
 //====================================================
 
-int main(){
+int main()
+	{
 	int pilihan;
 	
-	do{
+	do
+	{
 		cout << "\n=========================================\n";
         cout << "      SISTEM AKADEMIK SEDERHANA\n";
         cout << "=========================================\n";
@@ -144,7 +146,8 @@ int main(){
         cout << "Pilih Menu : ";
         cin >> pilihan;
         
-        switch(pilihan){
+        switch(pilihan)
+        {
         	case 1:
                 menuDataSiswa();
                 break;
@@ -280,20 +283,175 @@ void urutkanNilai()
 
 void menuDataSiswa()
 {
-
+	int pilih;
+	
+	do
+	{
+		cout << "\n=================================\n";
+        cout << "         DATA SISWA\n";
+        cout << "=================================\n";
+        cout << "1. Tambah Data\n";
+        cout << "2. Tampilkan Data\n";
+        cout << "3. Ubah Data\n";
+        cout << "4. Hapus Data\n";
+        cout << "5. Kembali\n";
+        cout << "=================================\n";
+        cout << "Pilih Menu : ";
+        cin >> pilih;
+        
+        switch(pilih)
+        {
+        	case 1:
+        		tambahSiswa();
+        		break;
+        		
+        	case 2:
+        		tampilSiswa();
+        		break;
+        		
+        	case 3:
+        		ubahSiswa();
+        		break;
+        		
+        	case 4:
+        		hapusSiswa();
+        		break;
+        		
+        	case 5:
+        		break;
+        		
+        	default:
+        		cout << "\nPilihan tidak valid!\n";
+		}
+	}while(pilih != 5);
 }
 
 void menuMapel()
 {
-
+	int pilih;
+	
+	do
+	{
+		cout << "\n=================================\n";
+        cout << "       MATA PELAJARAN\n";
+        cout << "=================================\n";
+        cout << "1. Tambah Mata Pelajaran\n";
+        cout << "2. Tampilkan Mata Pelajaran\n";
+        cout << "3. Ubah Mata Pelajaran\n";
+        cout << "4. Hapus Mata Pelajaran\n";
+        cout << "5. Kembali\n";
+        cout << "=================================\n";
+        cout << "Pilih Menu : ";
+        cin >> pilih;
+        
+        switch(pilih)
+        {
+        	case 1:
+        		tambahMapel();
+        		break;
+        		
+        	case 2:
+        		tampilMapel();
+        		break;
+        		
+        	case 3:
+        		ubahMapel();
+        		break;
+        		
+        	case 4:
+        		hapusMapel();
+        		break;
+        		
+        	case 5:
+        		break;
+        		
+        	default:
+        		cout << "\nPilihan tidak valid!\n";
+		}
+	}while(pilih != 5);
 }
 
 void menuJadwal()
 {
+	int pilih;
+	
+	do
+	{
+		cout << "\n=================================\n";
+        cout << "      JADWAL PELAJARAN\n";
+        cout << "=================================\n";
+        cout << "1. Tambah Jadwal\n";
+        cout << "2. Tampilkan Jadwal\n";
+        cout << "3. Hapus Jadwal\n";
+        cout << "4. Kembali\n";
+        cout << "=================================\n";
+        cout << "Pilih Menu : ";
+        cin >> pilih;
+        
+        switch(pilih)
+        {
+        	case 1:
+                tambahJadwal();
+                break;
 
+            case 2:
+                tampilJadwal();
+                break;
+
+            case 3:
+                hapusJadwal();
+                break;
+
+            case 4:
+                break;
+                
+            default:
+            	cout << "\nPilihan tidak valid!\n";
+		}
+	}while(pilih != 4);
 }
 
 void menuNilai()
 {
-
+	int pilih;
+	
+	do
+	{
+		cout << "\n=================================\n";
+        cout << "         NILAI SISWA\n";
+        cout << "=================================\n";
+        cout << "1. Input Nilai\n";
+        cout << "2. Tampilkan Nilai\n";
+        cout << "3. Cari Nilai\n";
+        cout << "4. Urutkan Nilai\n";
+        cout << "5. Kembali\n";
+        cout << "=================================\n";
+        cout << "Pilih Menu : ";
+        cin >> pilih;
+        
+        switch(pilih)
+        {
+        	case 1:
+        		tambahNilai();
+        		break;
+        		
+        	case 2:
+        		tampilNilai();
+        		break;
+        		
+        	case 3:
+        		cariNilai();
+        		break;
+        		
+        	case 4:
+        		urutkanNilai();
+        		break;
+        		
+        	case 5:
+        		break;
+        		
+        	default:
+        		cout << "\nPilihan tidak valid!\n";
+		}
+	}while(pilih != 5);
 }
