@@ -28,22 +28,32 @@ using namespace std;
 
 // Data Siswa
 struct Siswa {
-
+	string nis;
+	string nama;
+	string kelas;
 };
 
 // Data Mata Pelajaran
 struct MataPelajaran {
-
+	string kodeMapel;
+	string namaMapel;
+	int kkm;
 };
 
 // Data Nilai
 struct Nilai {
-
+	string nis;
+	string nama;
+	int nilai;
 };
 
 // Node Linked List Jadwal
 struct NodeJadwal {
+	string hari;
+	string jam;
+	string mataPelajaran;
 
+	NodeJadwal* next;
 };
 
 //====================================================
