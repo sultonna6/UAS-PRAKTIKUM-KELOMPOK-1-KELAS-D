@@ -128,8 +128,47 @@ void menuNilai();
 // 8. MAIN PROGRAM
 //====================================================
 
-int main()
-{
+int main(){
+	int pilihan;
+	
+	do{
+		cout << "\n=========================================\n";
+        cout << "      SISTEM AKADEMIK SEDERHANA\n";
+        cout << "=========================================\n";
+        cout << "1. Data Siswa\n";
+        cout << "2. Mata Pelajaran\n";
+        cout << "3. Jadwal Pelajaran\n";
+        cout << "4. Nilai Siswa\n";
+        cout << "5. Keluar\n";
+        cout << "=========================================\n";
+        cout << "Pilih Menu : ";
+        cin >> pilihan;
+        
+        switch(pilihan){
+        	case 1:
+                menuDataSiswa();
+                break;
+
+            case 2:
+                menuMapel();
+                break;
+
+            case 3:
+                menuJadwal();
+                break;
+
+            case 4:
+                menuNilai();
+                break;
+
+            case 5:
+                cout << "\nTerima kasih telah menggunakan program.\n";
+                break;
+
+            default:
+                cout << "\nPilihan tidak valid!\n";
+		}
+	} while (pilihan != 5);
 
     return 0;
 
