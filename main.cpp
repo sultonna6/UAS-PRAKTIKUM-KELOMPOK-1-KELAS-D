@@ -60,7 +60,20 @@ struct NodeJadwal {
 // 2. VARIABEL GLOBAL
 //====================================================
 
+// Data siswa
+Siswa daftarSiswa[100];
+int jumlahSiswa = 0;
 
+// Data Mata Pelajaran
+MataPelajaran daftarMapel[50];
+int jumlahMapel = 0;
+
+// Data Nilai
+Nilai daftarNilai[100];
+int jumlahNilai = 0;
+
+// Linked List Jadwal
+NodeJadwal* head = NULL;
 
 //====================================================
 // 3. FUNGSI DATA SISWA (Rangga Saputra)
