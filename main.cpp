@@ -306,22 +306,117 @@ void hapusSiswa()
 
 void tambahMapel()
 {
+	if (jumlahMapel >= 100)
+    {
+        cout << "\nData mata pelajaran sudah penuh!\n";
+        return;
+    }
 
+    cout << "\n=================================\n";
+    cout << "     TAMBAH MATA PELAJARAN\n";
+    cout << "=================================\n";
+
+    cout << "Masukkan Kode Mapel : ";
+    cin >> daftarMapel[jumlahMapel].kodeMapel;
+
+    cin.ignore();
+
+    cout << "Masukkan Nama Mapel : ";
+    getline(cin, daftarMapel[jumlahMapel].namaMapel);
+
+    cout << "Masukkan KKM        : ";
+    cin >> daftarMapel[jumlahMapel].kkm;
+
+    jumlahMapel++;
+
+    cout << "\nData mata pelajaran berhasil ditambahkan!\n";
 }
 
 void tampilMapel()
 {
+	cout << "\n=================================\n";
+    cout << "      DATA MATA PELAJARAN\n";
+    cout << "=================================\n";
 
+    if (jumlahMapel == 0)
+    {
+        cout << "Data mata pelajaran masih kosong!\n";
+        return;
+    }
+
+    for (int i = 0; i < jumlahMapel; i++)
+    {
+        cout << "\nData Ke-" << i + 1 << endl;
+        cout << "Kode Mapel : " << daftarMapel[i].kodeMapel << endl;
+        cout << "Nama Mapel : " << daftarMapel[i].namaMapel << endl;
+        cout << "KKM        : " << daftarMapel[i].kkm << endl;
+    }
 }
 
 void ubahMapel()
 {
+	string kode;
+    bool ditemukan = false;
+
+    cout << "\nMasukkan Kode Mapel yang akan diubah : ";
+    cin >> kode;
+
+    cin.ignore();
+
+    for (int i = 0; i < jumlahMapel; i++)
+    {
+        if (daftarMapel[i].kodeMapel == kode)
+        {
+            cout << "Masukkan Nama Mapel Baru : ";
+            getline(cin, daftarMapel[i].namaMapel);
+
+            cout << "Masukkan KKM Baru : ";
+            cin >> daftarMapel[i].kkm;
+
+            cout << "\nData berhasil diubah!\n";
+
+            ditemukan = true;
+            break;
+        }
+    }
+
+    if (!ditemukan)
+    {
+        cout << "\nData mata pelajaran tidak ditemukan!\n";
+    }
 
 }
 
 void hapusMapel()
 {
+	string kode;
+    bool ditemukan = false;
 
+    cout << "\nMasukkan Kode Mapel yang akan dihapus : ";
+    cin >> kode;
+
+    for (int i = 0; i < jumlahMapel; i++)
+    {
+        if (daftarMapel[i].kodeMapel == kode)
+        {
+            for (int j = i; j < jumlahMapel - 1; j++)
+            {
+                daftarMapel[j] = daftarMapel[j + 1];
+            }
+
+            jumlahMapel--;
+
+            cout << "\nData berhasil dihapus!\n";
+
+            ditemukan = true;
+            break;
+        }
+    }
+
+    if (!ditemukan)
+    {
+        cout << "\nData mata pelajaran tidak ditemukan!\n";
+    }
 }
 
 
