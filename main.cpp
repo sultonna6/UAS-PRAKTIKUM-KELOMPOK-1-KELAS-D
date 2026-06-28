@@ -188,22 +188,115 @@ int main()
 
 void tambahSiswa()
 {
+	if (jumlahSiswa >= 100)
+    {
+        cout << "\nData siswa sudah penuh!\n";
+        return;
+    }
 
+    cout << "\n=================================\n";
+    cout << "       TAMBAH DATA SISWA\n";
+    cout << "=================================\n";
+
+    cout << "Masukkan NIS   : ";
+    cin >> daftarSiswa[jumlahSiswa].nis;
+
+    cin.ignore();
+
+    cout << "Masukkan Nama  : ";
+    getline(cin, daftarSiswa[jumlahSiswa].nama);
+
+    cout << "Masukkan Kelas : ";
+    getline(cin, daftarSiswa[jumlahSiswa].kelas);
+
+    jumlahSiswa++;
+
+    cout << "\nData siswa berhasil ditambahkan!\n";
 }
 
 void tampilSiswa()
 {
+	cout << "\n=================================\n";
+    cout << "          DATA SISWA\n";
+    cout << "=================================\n";
 
+    if (jumlahSiswa == 0)
+    {
+        cout << "Data siswa masih kosong!\n";
+        return;
+    }
+
+    for (int i = 0; i < jumlahSiswa; i++)
+    {
+        cout << "\nData Ke-" << i + 1 << endl;
+        cout << "NIS   : " << daftarSiswa[i].nis << endl;
+        cout << "Nama  : " << daftarSiswa[i].nama << endl;
+        cout << "Kelas : " << daftarSiswa[i].kelas << endl;
+    }
 }
 
 void ubahSiswa()
 {
+	string cariNIS;
+    bool ditemukan = false;
 
+    cout << "\nMasukkan NIS yang akan diubah : ";
+    cin >> cariNIS;
+    cin.ignore();
+
+    for (int i = 0; i < jumlahSiswa; i++)
+    {
+        if (daftarSiswa[i].nis == cariNIS)
+        {
+            cout << "Masukkan Nama Baru  : ";
+            getline(cin, daftarSiswa[i].nama);
+
+            cout << "Masukkan Kelas Baru : ";
+            getline(cin, daftarSiswa[i].kelas);
+
+            cout << "\nData berhasil diubah!\n";
+
+            ditemukan = true;
+            break;
+        }
+    }
+
+    if (!ditemukan)
+    {
+        cout << "\nData siswa tidak ditemukan!\n";
+    }
 }
 
 void hapusSiswa()
 {
+	string cariNIS;
+    bool ditemukan = false;
 
+    cout << "\nMasukkan NIS yang akan dihapus : ";
+    cin >> cariNIS;
+
+    for (int i = 0; i < jumlahSiswa; i++)
+    {
+        if (daftarSiswa[i].nis == cariNIS)
+        {
+            for (int j = i; j < jumlahSiswa - 1; j++)
+            {
+                daftarSiswa[j] = daftarSiswa[j + 1];
+            }
+
+            jumlahSiswa--;
+
+            cout << "\nData berhasil dihapus!\n";
+
+            ditemukan = true;
+            break;
+        }
+    }
+
+    if (!ditemukan)
+    {
+        cout << "\nData siswa tidak ditemukan!\n";
+    }
 }
 
 
