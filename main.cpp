@@ -453,7 +453,7 @@ void tambahNilai()
     }
 
     cout << "\n=================================\n";
-    cout << "         INPUT NILAI\n";
+    cout << "        INPUT NILAI SISWA\n";
     cout << "=================================\n";
 
     cout << "Masukkan NIS   : ";
@@ -475,7 +475,7 @@ void tambahNilai()
 void tampilNilai()
 {
 	cout << "\n=================================\n";
-    cout << "          DATA NILAI\n";
+    cout << "         DATA NILAI\n";
     cout << "=================================\n";
 
     if (jumlahNilai == 0)
@@ -487,9 +487,9 @@ void tampilNilai()
     for (int i = 0; i < jumlahNilai; i++)
     {
         cout << "\nData Ke-" << i + 1 << endl;
-        cout << "NIS   : " << daftarNilai[i].nis << endl;
-        cout << "Nama  : " << daftarNilai[i].nama << endl;
-        cout << "Nilai : " << daftarNilai[i].nilai << endl;
+        cout << "NIS    : " << daftarNilai[i].nis << endl;
+        cout << "Nama   : " << daftarNilai[i].nama << endl;
+        cout << "Nilai  : " << daftarNilai[i].nilai << endl;
     }
 }
 
@@ -506,9 +506,9 @@ void cariNilai()
         if (daftarNilai[i].nis == cariNIS)
         {
             cout << "\nData ditemukan!\n";
-            cout << "NIS   : " << daftarNilai[i].nis << endl;
-            cout << "Nama  : " << daftarNilai[i].nama << endl;
-            cout << "Nilai : " << daftarNilai[i].nilai << endl;
+            cout << "NIS    : " << daftarNilai[i].nis << endl;
+            cout << "Nama   : " << daftarNilai[i].nama << endl;
+            cout << "Nilai  : " << daftarNilai[i].nilai << endl;
 
             ditemukan = true;
             break;
@@ -523,13 +523,15 @@ void cariNilai()
 
 void urutkanNilai()
 {
-	for (int i = 0; i < jumlahNilai - 1; i++)
+	Nilai temp;
+
+    for (int i = 0; i < jumlahNilai - 1; i++)
     {
         for (int j = 0; j < jumlahNilai - i - 1; j++)
         {
             if (daftarNilai[j].nilai < daftarNilai[j + 1].nilai)
             {
-                Nilai temp = daftarNilai[j];
+                temp = daftarNilai[j];
                 daftarNilai[j] = daftarNilai[j + 1];
                 daftarNilai[j + 1] = temp;
             }
