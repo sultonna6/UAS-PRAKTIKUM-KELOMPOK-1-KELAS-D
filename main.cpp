@@ -446,22 +446,97 @@ void hapusJadwal()
 
 void tambahNilai()
 {
+	if (jumlahNilai >= 100)
+    {
+        cout << "\nData nilai sudah penuh!\n";
+        return;
+    }
 
+    cout << "\n=================================\n";
+    cout << "         INPUT NILAI\n";
+    cout << "=================================\n";
+
+    cout << "Masukkan NIS   : ";
+    cin >> daftarNilai[jumlahNilai].nis;
+
+    cin.ignore();
+
+    cout << "Masukkan Nama  : ";
+    getline(cin, daftarNilai[jumlahNilai].nama);
+
+    cout << "Masukkan Nilai : ";
+    cin >> daftarNilai[jumlahNilai].nilai;
+
+    jumlahNilai++;
+
+    cout << "\nData nilai berhasil ditambahkan!\n";
 }
 
 void tampilNilai()
 {
+	cout << "\n=================================\n";
+    cout << "          DATA NILAI\n";
+    cout << "=================================\n";
 
+    if (jumlahNilai == 0)
+    {
+        cout << "Data nilai masih kosong!\n";
+        return;
+    }
+
+    for (int i = 0; i < jumlahNilai; i++)
+    {
+        cout << "\nData Ke-" << i + 1 << endl;
+        cout << "NIS   : " << daftarNilai[i].nis << endl;
+        cout << "Nama  : " << daftarNilai[i].nama << endl;
+        cout << "Nilai : " << daftarNilai[i].nilai << endl;
+    }
 }
 
 void cariNilai()
 {
+	string cariNIS;
+    bool ditemukan = false;
 
+    cout << "\nMasukkan NIS yang dicari : ";
+    cin >> cariNIS;
+
+    for (int i = 0; i < jumlahNilai; i++)
+    {
+        if (daftarNilai[i].nis == cariNIS)
+        {
+            cout << "\nData ditemukan!\n";
+            cout << "NIS   : " << daftarNilai[i].nis << endl;
+            cout << "Nama  : " << daftarNilai[i].nama << endl;
+            cout << "Nilai : " << daftarNilai[i].nilai << endl;
+
+            ditemukan = true;
+            break;
+        }
+    }
+
+    if (!ditemukan)
+    {
+        cout << "\nData tidak ditemukan!\n";
+    }
 }
 
 void urutkanNilai()
 {
+	for (int i = 0; i < jumlahNilai - 1; i++)
+    {
+        for (int j = 0; j < jumlahNilai - i - 1; j++)
+        {
+            if (daftarNilai[j].nilai < daftarNilai[j + 1].nilai)
+            {
+                Nilai temp = daftarNilai[j];
+                daftarNilai[j] = daftarNilai[j + 1];
+                daftarNilai[j + 1] = temp;
+            }
+        }
+    }
 
+    cout << "\nData berhasil diurutkan dari nilai tertinggi.\n";
 }
 
 
