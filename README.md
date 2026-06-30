@@ -1,190 +1,107 @@
 # 📚 Sistem Akademik Sederhana
 
-## Ujian Akhir Semester (UAS)
-
-### Praktikum Algoritma dan Struktur Data
+Program **Sistem Akademik Sederhana** berbasis **C++** yang dibuat untuk memenuhi tugas **Ujian Akhir Semester (UAS)** Praktikum Algoritma dan Struktur Data.
 
 ---
 
-## Deskripsi Proyek
+## 👥 Kelompok 1
 
-Sistem Akademik Sederhana adalah aplikasi berbasis C++ yang digunakan untuk mengelola data akademik sekolah. Sistem ini membantu pengguna dalam mengelola data siswa, mata pelajaran, jadwal pelajaran, dan nilai siswa secara terstruktur.
-
-Proyek ini dibuat untuk memenuhi tugas Ujian Akhir Semester (UAS) mata kuliah Praktikum Algoritma dan Struktur Data dengan menerapkan konsep struktur data yang telah dipelajari selama perkuliahan.
-
----
-
-## Studi Kasus
-
-**Sistem Akademik Sederhana**
-
-Sekolah ingin membangun sistem yang dapat mengelola data siswa, mata pelajaran, jadwal, nilai, serta pencarian dan pengurutan data akademik.
+| No | Nama | NIM |
+|----|-------------------------|------------|
+| 1 | Sulton Nur Arif | 2503010083 |
+| 2 | Rangga Saputra | 2503010076 |
+| 3 | Muhamad Khusaeri | 2503010090 |
+| 4 | Rega Faturrahman | 2503010088 |
+| 5 | Nurjaqia | 2503010095 |
 
 ---
 
-## Tujuan Proyek
+## 📖 Deskripsi
 
-* Mengelola data siswa.
-* Mengelola data mata pelajaran.
-* Mengelola jadwal pelajaran.
-* Mengelola nilai siswa.
-* Menampilkan informasi akademik secara terstruktur.
-* Menerapkan konsep struktur data dalam bahasa C++.
-* Melatih kerja sama tim menggunakan GitHub.
+Program ini merupakan aplikasi **Sistem Akademik Sederhana** berbasis C++ yang dibuat sebagai tugas UAS Praktikum Algoritma dan Struktur Data. Program menggunakan menu interaktif untuk mengelola data akademik.
 
 ---
 
-## Fitur Sistem
+## ✨ Fitur
 
-### Data Siswa
+### 👨‍🎓 Data Siswa
+- Tambah Data Siswa
+- Tampilkan Data Siswa
+- Ubah Data Siswa
+- Hapus Data Siswa
 
-* Tambah data siswa
-* Tampilkan data siswa
-* Edit data siswa
-* Hapus data siswa
+### 📚 Mata Pelajaran
+- Tambah Mata Pelajaran
+- Tampilkan Mata Pelajaran
+- Ubah Mata Pelajaran
+- Hapus Mata Pelajaran
 
-### Mata Pelajaran
+### 📅 Jadwal Pelajaran
+- Tambah Jadwal Pelajaran
+- Tampilkan Jadwal Pelajaran
+- Hapus Jadwal Pelajaran
 
-* Tambah mata pelajaran
-* Tampilkan mata pelajaran
-
-### Jadwal Pelajaran
-
-* Tambah jadwal pelajaran
-* Tampilkan jadwal pelajaran
-
-### Nilai Siswa
-
-* Input nilai siswa
-* Tampilkan nilai siswa
-
-### Pencarian Data
-
-* Cari siswa berdasarkan NIS
-* Cari siswa berdasarkan nama
-
-### Pengurutan Data
-
-* Urutkan data siswa berdasarkan nama
-* Urutkan data nilai siswa
+### 📝 Nilai Siswa
+- Tambah Nilai
+- Tampilkan Nilai
+- Cari Nilai
+- Urutkan Nilai
 
 ---
 
-## Struktur Data yang Digunakan
+## 🛠️ Teknologi
 
-### Array
-
-Digunakan untuk menyimpan data siswa, mata pelajaran, dan nilai.
-
-### Linked List
-
-Digunakan untuk mengelola data jadwal pelajaran yang dapat bertambah secara dinamis.
+- Bahasa C++
+- Dev-C++ / GCC
+- Git
+- GitHub
 
 ---
 
-## Tipe Data yang Digunakan
+## 👨‍💻 Pembagian Tugas
 
-### Struct Siswa
-
-Digunakan untuk menyimpan data siswa.
-
-### Struct Mata Pelajaran
-
-Digunakan untuk menyimpan data mata pelajaran.
-
-### Struct Jadwal
-
-Digunakan untuk menyimpan data jadwal pelajaran.
-
-### Struct Nilai
-
-Digunakan untuk menyimpan data nilai siswa.
+| Anggota | Tugas |
+|----------|---------------------------|
+| Sulton Nur Arif | Integrasi Program & GitHub |
+| Rangga Saputra | Modul Data Siswa |
+| Muhamad Khusaeri | Modul Mata Pelajaran |
+| Rega Faturrahman | Modul Nilai Siswa |
+| Nurjaqia | Modul Jadwal Pelajaran |
 
 ---
 
-## Struktur Menu
+## 📂 Struktur Repository
 
 ```text
-=================================
-     SISTEM AKADEMIK
-=================================
-
-1. Data Siswa
-2. Mata Pelajaran
-3. Jadwal Pelajaran
-4. Nilai Siswa
-5. Cari Siswa
-6. Urutkan Data
-7. Tampilkan Semua Data
-8. Keluar
+UAS-PRAKTIKUM-KELOMPOK-1-KELAS-D
+│
+├── main.cpp
+├── README.md
+├── LICENSE
+└── docs
+    ├── Flowchart UAS.drawio
+    ├── Flowchart UAS.drawio.png
+    └── Laporan UAS Kelompok 1.pdf
 ```
 
 ---
 
-## Flowchart Sistem
+## 📄 Dokumentasi
 
-![Flowchart](Flowchart%20UAS.drawio.png)
-
----
-
-## Pembagian Tugas Kelompok
-
-### Sulton Nur Arif (Lead Developer)
-
-* Membuat repository GitHub
-* Membuat flowchart sistem
-* Membuat menu utama
-* Mengintegrasikan seluruh modul
-* Review dan merge Pull Request
-
-### Rangga Saputra
-
-* Modul Data Siswa
-* Implementasi Struct dan Array Data Siswa
-
-### Muhamad Khusaeri
-
-* Modul Mata Pelajaran
-* Implementasi Struct dan Array Mata Pelajaran
-
-### Nurjaqia
-
-* Modul Jadwal Pelajaran
-* Implementasi Linked List Jadwal
-
-### Rega Faturrahman
-
-* Modul Nilai Siswa
-* Pencarian dan Pengurutan Data
+Dokumentasi program, flowchart, dan laporan dapat dilihat pada folder **docs**.
 
 ---
 
-## Anggota Kelompok
+## 🎓 Mata Kuliah
 
-1. Sulton Nur Arif - 2503010083
-2. Rangga Saputra - 2503010076
-3. Muhamad Khusaeri - 2503010090
-4. Nurjaqia - 2503010095
-5. Rega Faturrahman - 2503010088
+**Praktikum Algoritma dan Struktur Data**
 
----
-
-## Teknologi yang Digunakan
-
-* C++
-* Git
-* GitHub
-* Dev-C++
+Fakultas Teknik  
+Program Studi Teknik Informatika  
+Universitas Perjuangan Tasikmalaya
 
 ---
 
-## Repository
+## © 2026 Kelompok 1
 
-UAS Praktikum Algoritma dan Struktur Data
-Kelompok 1 – Kelas D
-
----
-
-## Lisensi
-
-Proyek ini dibuat untuk keperluan akademik sebagai tugas Ujian Akhir Semester (UAS) Praktikum Algoritma dan Struktur Data.
+Repository ini dibuat untuk keperluan **Ujian Akhir Semester (UAS)** Praktikum Algoritma dan Struktur Data.
