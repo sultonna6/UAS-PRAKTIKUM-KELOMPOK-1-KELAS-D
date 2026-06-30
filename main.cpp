@@ -426,17 +426,115 @@ void hapusMapel()
 
 void tambahJadwal()
 {
+	NodeJadwal* baru = new NodeJadwal;
 
+    cout << "\n=================================\n";
+    cout << "      TAMBAH JADWAL\n";
+    cout << "=================================\n";
+
+    cin.ignore();
+
+    cout << "Masukkan Hari            : ";
+    getline(cin, baru->hari);
+
+    cout << "Masukkan Jam             : ";
+    getline(cin, baru->jam);
+
+    cout << "Masukkan Mata Pelajaran  : ";
+    getline(cin, baru->mataPelajaran);
+
+    baru->next = NULL;
+
+    if(head == NULL)
+    {
+        head = baru;
+    }
+    else
+    {
+        NodeJadwal* bantu = head;
+
+        while(bantu->next != NULL)
+        {
+            bantu = bantu->next;
+        }
+
+        bantu->next = baru;
+    }
+
+    cout << "\nJadwal berhasil ditambahkan!\n";
 }
 
 void tampilJadwal()
 {
+    cout << "\n=================================\n";
+    cout << "      DATA JADWAL\n";
+    cout << "=================================\n";
 
+    if(head == NULL)
+    {
+        cout << "Data jadwal masih kosong!\n";
+        return;
+    }
+
+    NodeJadwal* bantu = head;
+    int no = 1;
+
+    while(bantu != NULL)
+    {
+        cout << "\nData Ke-" << no++ << endl;
+        cout << "Hari            : " << bantu->hari << endl;
+        cout << "Jam             : " << bantu->jam << endl;
+        cout << "Mata Pelajaran  : " << bantu->mataPelajaran << endl;
+
+        bantu = bantu->next;
+    }
 }
 
 void hapusJadwal()
 {
+    if(head == NULL)
+    {
+        cout << "\nData jadwal masih kosong!\n";
+        return;
+    }
 
+    string hari;
+
+    cout << "\nMasukkan Hari yang akan dihapus : ";
+    cin.ignore();
+    getline(cin, hari);
+
+    NodeJadwal* bantu = head;
+    NodeJadwal* hapus = NULL;
+
+    if(head->hari == hari)
+    {
+        hapus = head;
+        head = head->next;
+
+        delete hapus;
+
+        cout << "\nJadwal berhasil dihapus!\n";
+        return;
+    }
+
+    while(bantu->next != NULL && bantu->next->hari != hari)
+    {
+        bantu = bantu->next;
+    }
+
+    if(bantu->next == NULL)
+    {
+        cout << "\nJadwal tidak ditemukan!\n";
+        return;
+    }
+
+    hapus = bantu->next;
+    bantu->next = hapus->next;
+
+    delete hapus;
+
+    cout << "\nJadwal berhasil dihapus!\n";
 }
 
 
