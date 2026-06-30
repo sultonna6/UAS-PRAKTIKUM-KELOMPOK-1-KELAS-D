@@ -306,22 +306,117 @@ void hapusSiswa()
 
 void tambahMapel()
 {
+	if (jumlahMapel >= 100)
+    {
+        cout << "\nData mata pelajaran sudah penuh!\n";
+        return;
+    }
 
+    cout << "\n=================================\n";
+    cout << "     TAMBAH MATA PELAJARAN\n";
+    cout << "=================================\n";
+
+    cout << "Masukkan Kode Mapel : ";
+    cin >> daftarMapel[jumlahMapel].kodeMapel;
+
+    cin.ignore();
+
+    cout << "Masukkan Nama Mapel : ";
+    getline(cin, daftarMapel[jumlahMapel].namaMapel);
+
+    cout << "Masukkan KKM        : ";
+    cin >> daftarMapel[jumlahMapel].kkm;
+
+    jumlahMapel++;
+
+    cout << "\nData mata pelajaran berhasil ditambahkan!\n";
 }
 
 void tampilMapel()
 {
+	cout << "\n=================================\n";
+    cout << "      DATA MATA PELAJARAN\n";
+    cout << "=================================\n";
 
+    if (jumlahMapel == 0)
+    {
+        cout << "Data mata pelajaran masih kosong!\n";
+        return;
+    }
+
+    for (int i = 0; i < jumlahMapel; i++)
+    {
+        cout << "\nData Ke-" << i + 1 << endl;
+        cout << "Kode Mapel : " << daftarMapel[i].kodeMapel << endl;
+        cout << "Nama Mapel : " << daftarMapel[i].namaMapel << endl;
+        cout << "KKM        : " << daftarMapel[i].kkm << endl;
+    }
 }
 
 void ubahMapel()
 {
+	string kode;
+    bool ditemukan = false;
+
+    cout << "\nMasukkan Kode Mapel yang akan diubah : ";
+    cin >> kode;
+
+    cin.ignore();
+
+    for (int i = 0; i < jumlahMapel; i++)
+    {
+        if (daftarMapel[i].kodeMapel == kode)
+        {
+            cout << "Masukkan Nama Mapel Baru : ";
+            getline(cin, daftarMapel[i].namaMapel);
+
+            cout << "Masukkan KKM Baru : ";
+            cin >> daftarMapel[i].kkm;
+
+            cout << "\nData berhasil diubah!\n";
+
+            ditemukan = true;
+            break;
+        }
+    }
+
+    if (!ditemukan)
+    {
+        cout << "\nData mata pelajaran tidak ditemukan!\n";
+    }
 
 }
 
 void hapusMapel()
 {
+	string kode;
+    bool ditemukan = false;
 
+    cout << "\nMasukkan Kode Mapel yang akan dihapus : ";
+    cin >> kode;
+
+    for (int i = 0; i < jumlahMapel; i++)
+    {
+        if (daftarMapel[i].kodeMapel == kode)
+        {
+            for (int j = i; j < jumlahMapel - 1; j++)
+            {
+                daftarMapel[j] = daftarMapel[j + 1];
+            }
+
+            jumlahMapel--;
+
+            cout << "\nData berhasil dihapus!\n";
+
+            ditemukan = true;
+            break;
+        }
+    }
+
+    if (!ditemukan)
+    {
+        cout << "\nData mata pelajaran tidak ditemukan!\n";
+    }
 }
 
 
@@ -351,22 +446,99 @@ void hapusJadwal()
 
 void tambahNilai()
 {
+	if (jumlahNilai >= 100)
+    {
+        cout << "\nData nilai sudah penuh!\n";
+        return;
+    }
 
+    cout << "\n=================================\n";
+    cout << "        INPUT NILAI SISWA\n";
+    cout << "=================================\n";
+
+    cout << "Masukkan NIS   : ";
+    cin >> daftarNilai[jumlahNilai].nis;
+
+    cin.ignore();
+
+    cout << "Masukkan Nama  : ";
+    getline(cin, daftarNilai[jumlahNilai].nama);
+
+    cout << "Masukkan Nilai : ";
+    cin >> daftarNilai[jumlahNilai].nilai;
+
+    jumlahNilai++;
+
+    cout << "\nData nilai berhasil ditambahkan!\n";
 }
 
 void tampilNilai()
 {
+	cout << "\n=================================\n";
+    cout << "         DATA NILAI\n";
+    cout << "=================================\n";
 
+    if (jumlahNilai == 0)
+    {
+        cout << "Data nilai masih kosong!\n";
+        return;
+    }
+
+    for (int i = 0; i < jumlahNilai; i++)
+    {
+        cout << "\nData Ke-" << i + 1 << endl;
+        cout << "NIS    : " << daftarNilai[i].nis << endl;
+        cout << "Nama   : " << daftarNilai[i].nama << endl;
+        cout << "Nilai  : " << daftarNilai[i].nilai << endl;
+    }
 }
 
 void cariNilai()
 {
+	string cariNIS;
+    bool ditemukan = false;
 
+    cout << "\nMasukkan NIS yang dicari : ";
+    cin >> cariNIS;
+
+    for (int i = 0; i < jumlahNilai; i++)
+    {
+        if (daftarNilai[i].nis == cariNIS)
+        {
+            cout << "\nData ditemukan!\n";
+            cout << "NIS    : " << daftarNilai[i].nis << endl;
+            cout << "Nama   : " << daftarNilai[i].nama << endl;
+            cout << "Nilai  : " << daftarNilai[i].nilai << endl;
+
+            ditemukan = true;
+            break;
+        }
+    }
+
+    if (!ditemukan)
+    {
+        cout << "\nData tidak ditemukan!\n";
+    }
 }
 
 void urutkanNilai()
 {
+	Nilai temp;
 
+    for (int i = 0; i < jumlahNilai - 1; i++)
+    {
+        for (int j = 0; j < jumlahNilai - i - 1; j++)
+        {
+            if (daftarNilai[j].nilai < daftarNilai[j + 1].nilai)
+            {
+                temp = daftarNilai[j];
+                daftarNilai[j] = daftarNilai[j + 1];
+                daftarNilai[j + 1] = temp;
+            }
+        }
+    }
+
+    cout << "\nData berhasil diurutkan dari nilai tertinggi.\n";
 }
 
 
