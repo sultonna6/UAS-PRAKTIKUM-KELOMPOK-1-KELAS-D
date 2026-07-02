@@ -1,190 +1,234 @@
-# 📚 Sistem Akademik Sederhana
+# 🎓 Sistem Akademik Sederhana
+> Proyek Ujian Akhir Semester (UAS) Praktikum Algoritma dan Struktur Data  
+> **Program Studi Teknik Informatika – Universitas Perjuangan Tasikmalaya**
 
-## Ujian Akhir Semester (UAS)
-
-### Praktikum Algoritma dan Struktur Data
-
----
-
-## Deskripsi Proyek
-
-Sistem Akademik Sederhana adalah aplikasi berbasis C++ yang digunakan untuk mengelola data akademik sekolah. Sistem ini membantu pengguna dalam mengelola data siswa, mata pelajaran, jadwal pelajaran, dan nilai siswa secara terstruktur.
-
-Proyek ini dibuat untuk memenuhi tugas Ujian Akhir Semester (UAS) mata kuliah Praktikum Algoritma dan Struktur Data dengan menerapkan konsep struktur data yang telah dipelajari selama perkuliahan.
+Program ini merupakan aplikasi **Sistem Akademik Sederhana** berbasis **C++** yang dirancang untuk membantu pengelolaan data akademik secara dasar melalui antarmuka menu interaktif di terminal/console.  
+Fitur utama yang tersedia meliputi pengelolaan **data siswa**, **mata pelajaran**, **jadwal pelajaran**, serta **nilai siswa**.
 
 ---
 
-## Studi Kasus
+## 👥 Anggota Kelompok 1
 
-**Sistem Akademik Sederhana**
-
-Sekolah ingin membangun sistem yang dapat mengelola data siswa, mata pelajaran, jadwal, nilai, serta pencarian dan pengurutan data akademik.
-
----
-
-## Tujuan Proyek
-
-* Mengelola data siswa.
-* Mengelola data mata pelajaran.
-* Mengelola jadwal pelajaran.
-* Mengelola nilai siswa.
-* Menampilkan informasi akademik secara terstruktur.
-* Menerapkan konsep struktur data dalam bahasa C++.
-* Melatih kerja sama tim menggunakan GitHub.
+| No | Nama | NIM |
+|----|------|-----|
+| 1 | **Sulton Nur Arif** | **2503010083** |
+| 2 | **Rangga Saputra** | **2503010076** |
+| 3 | **Muhamad Khusaeri** | **2503010090** |
+| 4 | **Rega Faturrahman** | **2503010088** |
+| 5 | **Nurjaqia** | **2503010095** |
 
 ---
 
-## Fitur Sistem
+## 📌 Latar Belakang
+Pengelolaan data akademik merupakan salah satu kebutuhan dasar dalam lingkungan pendidikan.  
+Melalui proyek ini, kami membuat program sederhana yang dapat digunakan untuk menyimpan dan mengelola data akademik menggunakan konsep-konsep dasar dalam **Algoritma dan Struktur Data**, seperti:
 
-### Data Siswa
+- **Struct**
+- **Array**
+- **Linked List**
+- **Sequential Search**
+- **Bubble Sort**
+- **Function / Modular Programming**
+- **Menu berbasis perulangan**
 
-* Tambah data siswa
-* Tampilkan data siswa
-* Edit data siswa
-* Hapus data siswa
-
-### Mata Pelajaran
-
-* Tambah mata pelajaran
-* Tampilkan mata pelajaran
-
-### Jadwal Pelajaran
-
-* Tambah jadwal pelajaran
-* Tampilkan jadwal pelajaran
-
-### Nilai Siswa
-
-* Input nilai siswa
-* Tampilkan nilai siswa
-
-### Pencarian Data
-
-* Cari siswa berdasarkan NIS
-* Cari siswa berdasarkan nama
-
-### Pengurutan Data
-
-* Urutkan data siswa berdasarkan nama
-* Urutkan data nilai siswa
+Program ini dibuat sebagai implementasi materi praktikum ke dalam studi kasus sederhana yang relevan dengan dunia akademik.
 
 ---
 
-## Struktur Data yang Digunakan
+## 🎯 Tujuan Program
+Program ini dibuat dengan tujuan untuk:
 
-### Array
-
-Digunakan untuk menyimpan data siswa, mata pelajaran, dan nilai.
-
-### Linked List
-
-Digunakan untuk mengelola data jadwal pelajaran yang dapat bertambah secara dinamis.
-
----
-
-## Tipe Data yang Digunakan
-
-### Struct Siswa
-
-Digunakan untuk menyimpan data siswa.
-
-### Struct Mata Pelajaran
-
-Digunakan untuk menyimpan data mata pelajaran.
-
-### Struct Jadwal
-
-Digunakan untuk menyimpan data jadwal pelajaran.
-
-### Struct Nilai
-
-Digunakan untuk menyimpan data nilai siswa.
+1. Mengelola **data siswa** secara sederhana.
+2. Mengelola **data mata pelajaran**.
+3. Menyimpan dan menampilkan **jadwal pelajaran**.
+4. Mengelola **nilai siswa**, termasuk pencarian dan pengurutan data.
+5. Mengimplementasikan konsep **Algoritma dan Struktur Data** dalam program nyata berbasis C++.
 
 ---
 
-## Struktur Menu
+# ✨ Fitur Program
+
+## 1) Modul Data Siswa
+Fitur untuk mengelola informasi siswa.
+
+- Tambah Data Siswa
+- Tampilkan Data Siswa
+- Ubah Data Siswa
+- Hapus Data Siswa
+
+### Data yang disimpan:
+- NIS
+- Nama
+- Kelas
+
+---
+
+## 2) Modul Mata Pelajaran
+Fitur untuk mengelola data mata pelajaran.
+
+- Tambah Mata Pelajaran
+- Tampilkan Mata Pelajaran
+- Ubah Mata Pelajaran
+- Hapus Mata Pelajaran
+
+### Data yang disimpan:
+- Kode Mata Pelajaran
+- Nama Mata Pelajaran
+- KKM
+
+---
+
+## 3) Modul Jadwal Pelajaran
+Fitur untuk mengelola jadwal pelajaran menggunakan **Linked List**.
+
+- Tambah Jadwal Pelajaran
+- Tampilkan Jadwal Pelajaran
+- Hapus Jadwal Pelajaran
+
+### Data yang disimpan:
+- Hari
+- Jam
+- Mata Pelajaran
+
+---
+
+## 4) Modul Nilai Siswa
+Fitur untuk mengelola nilai siswa.
+
+- Input Nilai Siswa
+- Tampilkan Nilai Siswa
+- Cari Nilai Siswa
+- Urutkan Nilai Siswa
+
+### Data yang disimpan:
+- NIS
+- Nama
+- Nilai
+
+### Algoritma yang digunakan:
+- **Sequential Search** → untuk mencari data nilai berdasarkan NIS
+- **Bubble Sort** → untuk mengurutkan nilai dari tertinggi ke terendah
+
+---
+
+# 🧩 Struktur Data dan Algoritma yang Digunakan
+
+| Konsep | Implementasi |
+|--------|--------------|
+| **Struct** | Menyimpan data `Siswa`, `MataPelajaran`, `Nilai`, dan `NodeJadwal` |
+| **Array** | Digunakan untuk menyimpan kumpulan data siswa, mapel, dan nilai |
+| **Linked List** | Digunakan pada modul **Jadwal Pelajaran** |
+| **Sequential Search** | Digunakan untuk mencari data nilai siswa |
+| **Bubble Sort** | Digunakan untuk mengurutkan nilai siswa |
+| **Function** | Program dibagi ke dalam fungsi-fungsi sesuai modul |
+| **Menu do-while** | Digunakan untuk menampilkan menu berulang sampai user keluar |
+
+---
+
+# 🏗️ Struktur Program
+
+Secara umum program dibagi menjadi beberapa bagian utama:
+
+1. **Struct**  
+   Digunakan untuk mendefinisikan bentuk data:
+   - `Siswa`
+   - `MataPelajaran`
+   - `Nilai`
+   - `NodeJadwal`
+
+2. **Variabel Global**  
+   Digunakan untuk menyimpan kumpulan data program.
+
+3. **Fungsi per Modul**  
+   Setiap anggota mengerjakan modul masing-masing:
+   - Data Siswa
+   - Mata Pelajaran
+   - Jadwal Pelajaran
+   - Nilai Siswa
+
+4. **Menu Program**  
+   Digunakan sebagai antarmuka utama agar pengguna dapat memilih fitur yang ingin dijalankan.
+
+---
+
+# 👨‍💻 Pembagian Tugas Anggota
+
+| Anggota | Tanggung Jawab |
+|---------|----------------|
+| **Sulton Nur Arif** | Integrasi program, pembuatan struktur program utama, pengelolaan GitHub, penggabungan modul |
+| **Rangga Saputra** | Modul **Data Siswa** |
+| **Muhamad Khusaeri** | Modul **Mata Pelajaran** |
+| **Rega Faturrahman** | Modul **Nilai Siswa** |
+| **Nurjaqia** | Modul **Jadwal Pelajaran (Linked List)** |
+
+---
+
+# ▶️ Cara Menjalankan Program
+
+## Persyaratan
+Pastikan komputer memiliki compiler C++, misalnya:
+- **Dev-C++**
+- **Code::Blocks**
+- **g++ / MinGW**
+- IDE lain yang mendukung C++
+
+## Langkah Menjalankan
+1. **Clone repository** ini atau download project.
+2. Buka file **`main.cpp`** menggunakan editor / IDE C++.
+3. Compile program.
+4. Jalankan program.
+5. Pilih menu yang tersedia sesuai kebutuhan.
+
+---
+
+# 📂 Struktur Repository
 
 ```text
-=================================
-     SISTEM AKADEMIK
-=================================
-
-1. Data Siswa
-2. Mata Pelajaran
-3. Jadwal Pelajaran
-4. Nilai Siswa
-5. Cari Siswa
-6. Urutkan Data
-7. Tampilkan Semua Data
-8. Keluar
+UAS-PRAKTIKUM-KELOMPOK-1-KELAS-D
+│
+├── main.cpp
+├── README.md
+├── LICENSE
+└── docs
+    ├── Flowchart UAS.drawio
+    ├── Flowchart UAS.drawio.png
+    ├── Laporan UAS Kelompok 1.docx
+    └── Laporan UAS Kelompok 1.pdf
 ```
 
----
-
-## Flowchart Sistem
-
-![Flowchart](Flowchart%20UAS.drawio.png)
+> Folder `docs` digunakan untuk menyimpan dokumentasi proyek seperti flowchart, laporan, dan file pendukung lainnya.
 
 ---
 
-## Pembagian Tugas Kelompok
+# 🖼️ Dokumentasi
+Dokumentasi proyek, flowchart, dan laporan disimpan di folder **`docs/`**.
 
-### Sulton Nur Arif (Lead Developer)
-
-* Membuat repository GitHub
-* Membuat flowchart sistem
-* Membuat menu utama
-* Mengintegrasikan seluruh modul
-* Review dan merge Pull Request
-
-### Rangga Saputra
-
-* Modul Data Siswa
-* Implementasi Struct dan Array Data Siswa
-
-### Muhamad Khusaeri
-
-* Modul Mata Pelajaran
-* Implementasi Struct dan Array Mata Pelajaran
-
-### Nurjaqia
-
-* Modul Jadwal Pelajaran
-* Implementasi Linked List Jadwal
-
-### Rega Faturrahman
-
-* Modul Nilai Siswa
-* Pencarian dan Pengurutan Data
+Contoh dokumentasi yang dapat disertakan:
+- Flowchart program
+- Laporan UAS
+- Screenshot tampilan program
+- Penjelasan fitur dan pengujian
 
 ---
 
-## Anggota Kelompok
-
-1. Sulton Nur Arif - 2503010083
-2. Rangga Saputra - 2503010076
-3. Muhamad Khusaeri - 2503010090
-4. Nurjaqia - 2503010095
-5. Rega Faturrahman - 2503010088
+# 📚 Mata Kuliah
+**Praktikum Algoritma dan Struktur Data**  
+Fakultas Teknik – Program Studi Teknik Informatika  
+**Universitas Perjuangan Tasikmalaya**
 
 ---
 
-## Teknologi yang Digunakan
-
-* C++
-* Git
-* GitHub
-* Dev-C++
+# 📅 Tahun Pengerjaan
+**2026**
 
 ---
 
-## Repository
-
-UAS Praktikum Algoritma dan Struktur Data
-Kelompok 1 – Kelas D
+# 📝 Catatan
+Program ini dibuat untuk keperluan pembelajaran dan penyelesaian tugas **Ujian Akhir Semester (UAS)**.  
+Implementasi difokuskan pada penerapan konsep dasar **algoritma dan struktur data** dalam bahasa pemrograman **C++**.
 
 ---
 
-## Lisensi
-
-Proyek ini dibuat untuk keperluan akademik sebagai tugas Ujian Akhir Semester (UAS) Praktikum Algoritma dan Struktur Data.
+# © Lisensi
+Repository ini dapat menggunakan **MIT License** apabila diperlukan untuk dokumentasi proyek.  
+Hak cipta proyek ini tetap menjadi milik **Kelompok 1 – Teknik Informatika – Universitas Perjuangan Tasikmalaya**.
